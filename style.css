@@ -830,33 +830,97 @@ body {
 
 @media (max-width: 768px) {
     .names {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-names {
-        font-size: 4.5rem;
+        font-size: 3rem;
+    }
+
+    .countdown-timer {
+        gap: 15px;
+        flex-wrap: wrap;
+        /* Permite que baje si es muy pequeño */
+        justify-content: center;
     }
 
     .timer-item {
-        min-width: 80px;
+        min-width: 70px;
+        margin: 5px;
     }
 
     .timer-item span {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
+    .timer-item label {
+        font-size: 0.8rem;
+    }
+
+    /* Timeline Mobile Fix */
     .timeline::after {
-        left: 40px;
+        left: 30px;
     }
 
     .timeline-item {
-        width: 100%;
-        padding-left: 70px;
+        width: 100% !important;
+        left: 0 !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        text-align: left !important;
+        margin-bottom: 4rem;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
         text-align: left !important;
     }
 
     .timeline-item::after {
-        left: 32px !important;
+        left: 22px !important;
+        right: auto !important;
+        top: 25px !important;
+        /* Alineado con el primer renglón */
+        transform: none !important;
+    }
+
+    .timeline-icon {
+        position: absolute !important;
+        right: 15px !important;
+        left: auto !important;
+        top: 20px !important;
+        width: 35px;
+        height: 35px;
+        transform: none !important;
+    }
+
+    .location-card {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem 3rem 1rem;
+    }
+
+    .itinerary-section .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Music button fix */
+    .music-player {
+        bottom: 25px;
+        right: 25px;
+        z-index: 1000;
+    }
+
+    .music-btn {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(197, 160, 89, 0.9);
+        /* Más visible */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 }
 
