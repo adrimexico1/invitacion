@@ -20,9 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create config.js from Secrets
-        run: |
-          echo "const CONFIG = { SCRIPT_URL: '${{ secrets.GOOGLE_SCRIPT_URL }}' };" > config.js
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
