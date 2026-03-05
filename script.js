@@ -60,6 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = '';
         if (infoPara) container.appendChild(infoPara);
 
+        const notice = document.createElement('p');
+        notice.style.fontSize = '0.75rem';
+        notice.style.color = 'var(--primary-color)';
+        notice.style.marginBottom = '2rem';
+        notice.style.fontStyle = 'italic';
+        notice.innerText = '* Si alguno de tus pases no será utilizado, favor de dejar el espacio en blanco.';
+        container.appendChild(notice);
+
         for (let i = 1; i <= count; i++) {
             const div = document.createElement('div');
             div.className = 'guest-entry';
@@ -67,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             div.innerHTML = `
                 <label class="input-label">Nombre del invitado ${i}</label>
                 <input type="text" name="guest_name_${i}" class="guest-name-input" 
-                       placeholder="Escribe el nombre" 
-                       value="${i === 1 && guestData ? guestData.name : ''}" required>
+                       placeholder="Escribir nombre o dejar vacío si no asiste" 
+                       value="${i === 1 && guestData ? guestData.name : ''}">
             `;
             container.appendChild(div);
         }
