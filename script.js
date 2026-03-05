@@ -13,15 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (guestData) {
                     // Update Cover Greeting
-                    const greeting = document.getElementById('guest-greeting-text');
+                    const greetingContainer = document.getElementById('guest-greeting-container');
                     const nameText = document.getElementById('guest-name-text');
                     const ticketText = document.getElementById('guest-tickets-count');
+                    const ninosCountText = document.getElementById('guest-ninos-count');
+                    const ninosDisplay = document.getElementById('guest-ninos-display');
                     const rsvpNameInput = document.getElementById('rsvp-name-input');
 
-                    if (greeting) greeting.style.display = 'block';
+                    if (greetingContainer) greetingContainer.style.display = 'block';
                     if (nameText) nameText.innerText = guestData.name;
                     if (ticketText) ticketText.innerText = guestData.invitados;
                     if (rsvpNameInput) rsvpNameInput.value = guestData.name;
+
+                    if (guestData.ninos > 0) {
+                        if (ninosDisplay) ninosDisplay.style.display = 'block';
+                        if (ninosCountText) ninosCountText.innerText = guestData.ninos;
+                    } else {
+                        if (ninosDisplay) ninosDisplay.style.display = 'none';
+                    }
 
                     // Update Form Step 3 Title
                     const step3Title = document.getElementById('rsvp-step3-title');

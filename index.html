@@ -58,10 +58,20 @@
             </div>
 
             <div class="reserved">
-                <p id="guest-greeting-text" style="display: none;">¡Hola <span id="guest-name-text"></span>!</p>
-                <p>Hemos reservado</p>
-                <span class="ticket-count" id="guest-tickets-count">1</span>
-                <p>Boletos para ti</p>
+                <div id="guest-greeting-container" style="display: none;">
+                    <p id="guest-greeting-text">¡Hola <span id="guest-name-text"></span>!</p>
+                    <p>Hemos reservado</p>
+                    <div class="tickets-display">
+                        <div class="ticket-item">
+                            <span class="ticket-count" id="guest-tickets-count">0</span>
+                            <p>Boletos adultos</p>
+                        </div>
+                        <div class="ticket-item" id="guest-ninos-display" style="display: none;">
+                            <span class="ticket-count" id="guest-ninos-count">0</span>
+                            <p>Pases niños</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -383,7 +393,7 @@
     </div>
 
     <script src="config.js"></script>
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=15"></script>
 </body>
 
 </html>

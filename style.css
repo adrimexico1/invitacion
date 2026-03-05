@@ -325,6 +325,19 @@ body {
     margin: 0.5rem 0;
 }
 
+.tickets-display {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.ticket-item {
+    text-align: center;
+    min-width: 100px;
+}
+
 /* --- Main Invitation --- */
 
 .invitation-hidden {
