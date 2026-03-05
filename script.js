@@ -170,9 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentStep = stepNumber;
             const progress = (stepNumber / 5) * 100;
             progressBar.style.width = `${progress}%`;
-
-            const rsvpSection = document.querySelector('.rsvp-section');
-            rsvpSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
