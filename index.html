@@ -355,8 +355,20 @@
                             <button type="button" class="btn btn-gold btn-next">Siguiente</button>
                         </div>
 
-                        <!-- Step 5: Success -->
-                        <div class="rsvp-step success-step" data-step="5">
+                        <!-- Step 5: Phone Number -->
+                        <div class="rsvp-step" data-step="5">
+                            <button type="button" class="btn-back">←</button>
+                            <h3>Tu número de contacto</h3>
+                            <label class="input-label">Número a 10 dígitos</label>
+                            <input type="text" name="phone" id="rsvp-phone-input" placeholder="5512345678"
+                                maxlength="10" pattern="\d{10}" inputmode="numeric" required>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: -1rem; margin-bottom: 2rem;">Solo
+                                números, sin espacios ni guiones.</p>
+                            <button type="button" class="btn btn-gold btn-next">Confirmar Asistencia</button>
+                        </div>
+
+                        <!-- Step 6: Success -->
+                        <div class="rsvp-step success-step" data-step="6">
                             <div class="success-icon">✓</div>
                             <h2>No podemos esperar para celebrar contigo.</h2>
                             <p>Gracias por formar parte de este día tan importante para nosotros</p>
@@ -388,7 +400,7 @@
     </div>
 
     <script src="config.js"></script>
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
 </body>
 
 </html>
