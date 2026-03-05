@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextStep) {
             nextStep.classList.add('active');
             currentStep = stepNumber;
-            const progress = (stepNumber / 6) * 100;
+            const progress = (stepNumber / 5) * 100;
             progressBar.style.width = `${progress}%`;
         }
     }
@@ -194,14 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = {
             full_name: formData.get('full_name'),
             attendance: formData.get('attendance'),
-            plus_one_names: allNames.join(', '), // Joined by comma as requested
-            food: formData.getAll('food').join(', '),
+            plus_one_names: allNames.join(', '),
             phone: formData.get('phone'),
             guest_id: guestId || "manual"
         };
 
         // Show loading state if desired
-        const lastBtn = document.querySelector('.rsvp-step[data-step="5"] .btn-next');
+        const lastBtn = document.querySelector('.rsvp-step[data-step="4"] .btn-next');
         const originalText = lastBtn.innerText;
         lastBtn.innerText = "Enviando...";
         lastBtn.disabled = true;
@@ -215,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(data)
             });
             // Proceed to success step even with no-cors as we assume success
-            updateStep(6);
+            updateStep(5);
         } catch (error) {
             console.error('Error:', error);
             alert('Hubo un problema al enviar tu confirmación. Por favor inténtalo de nuevo.');
@@ -248,8 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (currentStep === 2 && attendance === 'no') {
                         // Si no asiste, saltamos directo al envío
                         submitRSVP();
-                    } else if (currentStep === 5) {
-                        // Validación de teléfono antes de enviar
+                    } else if (currentStep === 4) {
+                        // Validación de teléfono antes de enviar (Paso final)
                         const phone = formData.get('phone');
                         if (phone && phone.length === 10) {
                             submitRSVP();
