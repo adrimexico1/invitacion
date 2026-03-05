@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (valid) {
+                    const formData = new FormData(rsvpForm);
                     const attendance = formData.get('attendance');
 
                     if (currentStep === 2 && attendance === 'no') {
