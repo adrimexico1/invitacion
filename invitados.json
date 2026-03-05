@@ -1,0 +1,22 @@
+{
+    "1": {
+        "name": "Tía Yola",
+        "invitados": 3,
+        "phone": ""
+    },
+    "2": {
+        "name": "Familia Sánchez",
+        "invitados": 5,
+        "phone": ""
+    },
+    "3": {
+        "name": "Juan Pérez",
+        "invitados": 1,
+        "phone": ""
+    },
+    "4": {
+        "name": "Amigo VIP",
+        "invitados": 2,
+        "phone": ""
+    }
+}

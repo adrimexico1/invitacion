@@ -58,8 +58,9 @@
             </div>
 
             <div class="reserved">
+                <p id="guest-greeting-text" style="display: none;">¡Hola <span id="guest-name-text"></span>!</p>
                 <p>Hemos reservado</p>
-                <span class="ticket-count">1</span>
+                <span class="ticket-count" id="guest-tickets-count">1</span>
                 <p>Boletos para ti</p>
             </div>
         </div>
@@ -291,7 +292,8 @@
                         <div class="rsvp-step active" data-step="1">
                             <h3>¿Cuál es tu nombre?</h3>
                             <label class="input-label">Nombre completo</label>
-                            <input type="text" name="full_name" placeholder="Luz Marina Vargas Urdinola" required>
+                            <input type="text" name="full_name" id="rsvp-name-input"
+                                placeholder="Luz Marina Vargas Urdinola" required>
                             <button type="button" class="btn btn-gold btn-next">Siguiente</button>
                         </div>
 
@@ -315,20 +317,11 @@
                         <!-- Step 3: Plus One -->
                         <div class="rsvp-step" data-step="3">
                             <button type="button" class="btn-back">←</button>
-                            <h3>¿Llevaras acompañantes?</h3>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="plus_one" value="yes" required>
-                                    <span class="custom-radio"></span> Yes
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="plus_one" value="no">
-                                    <span class="custom-radio"></span> No
-                                </label>
-                            </div>
-                            <div class="conditional-input hidden">
-                                <label class="input-label">Sus nombres son:</label>
-                                <input type="text" name="plus_one_names" placeholder="Escribe sus nombres">
+                            <h3 id="rsvp-step3-title">Confirmar acompañantes</h3>
+                            <div id="dynamic-guests-container">
+                                <!-- Se generarán campos de texto dinamicamente aquí -->
+                                <p style="font-size: 0.9rem; color: #888; margin-bottom: 2rem;">Por favor, escribe los
+                                    nombres de todas las personas que asistirán:</p>
                             </div>
                             <button type="button" class="btn btn-gold btn-next">Siguiente</button>
                         </div>

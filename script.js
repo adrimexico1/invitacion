@@ -1,4 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Guest Logic
+    let guestData = null;
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestId = urlParams.get('id');
+
+    async function loadGuestInfo() {
+        if (guestId) {
+            try {
+                const response = await fetch('invitados.json');
+                const data = await response.json();
+                guestData = data[guestId];
+
+                if (guestData) {
+                    // Update Cover Greeting
+                    const greeting = document.getElementById('guest-greeting-text');
+                    const nameText = document.getElementById('guest-name-text');
+                    const ticketText = document.getElementById('guest-tickets-count');
+                    const rsvpNameInput = document.getElementById('rsvp-name-input');
+
+                    if (greeting) greeting.style.display = 'block';
+                    if (nameText) nameText.innerText = guestData.name;
+                    if (ticketText) ticketText.innerText = guestData.invitados;
+                    if (rsvpNameInput) rsvpNameInput.value = guestData.name;
+
+                    // Update Form Step 3 Title
+                    const step3Title = document.getElementById('rsvp-step3-title');
+                    if (step3Title) {
+                        step3Title.innerText = guestData.invitados > 1
+                            ? `Confirmar acompañantes (${guestData.invitados} boletos)`
+                            : `Confirmar asistencia (1 boleto)`;
+                    }
+
+                    generateGuestInputs(guestData.invitados);
+                }
+            } catch (error) {
+                console.error('Error cargando invitados:', error);
+                generateGuestInputs(1);
+            }
+        } else {
+            // Fallback para visitas manuales sin ID
+            generateGuestInputs(1);
+        }
+    }
+
+    function generateGuestInputs(count) {
+        const container = document.getElementById('dynamic-guests-container');
+        if (!container) return;
+
+        // Limpiar pero mantener el párrafo informativo
+        const infoPara = container.querySelector('p');
+        container.innerHTML = '';
+        if (infoPara) container.appendChild(infoPara);
+
+        for (let i = 1; i <= count; i++) {
+            const div = document.createElement('div');
+            div.className = 'guest-entry';
+            div.style.marginBottom = '1.5rem';
+            div.innerHTML = `
+                <label class="input-label">Nombre del invitado ${i}</label>
+                <input type="text" name="guest_name_${i}" class="guest-name-input" 
+                       placeholder="Escribe el nombre" 
+                       value="${i === 1 && guestData ? guestData.name : ''}" required>
+            `;
+            container.appendChild(div);
+        }
+    }
+
+    loadGuestInfo();
+
     // Reveal Invitation
     const cover = document.getElementById('cover');
     const mainInvitation = document.getElementById('main-invitation');
@@ -109,12 +178,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function submitRSVP() {
         const formData = new FormData(rsvpForm);
+
+        // Dynamic names collection
+        const guestNameInputs = document.querySelectorAll('.guest-name-input');
+        let allNames = [];
+        guestNameInputs.forEach(input => {
+            if (input.value.trim()) allNames.push(input.value.trim());
+        });
+
         const data = {
             full_name: formData.get('full_name'),
             attendance: formData.get('attendance'),
-            plus_one: formData.get('plus_one'),
-            plus_one_names: formData.get('plus_one_names') || "Ninguno",
-            food: formData.getAll('food')
+            plus_one_names: allNames.join(', '), // Joined by comma as requested
+            food: formData.getAll('food').join(', '),
+            guest_id: guestId || "manual"
         };
 
         // Show loading state if desired
@@ -159,7 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (valid) {
-                    if (currentStep === 4) {
+                    const attendance = formData.get('attendance');
+
+                    if (currentStep === 2 && attendance === 'no') {
+                        // Si no asiste, saltamos directo al envío
+                        submitRSVP();
+                    } else if (currentStep === 4) {
                         submitRSVP();
                     } else {
                         updateStep(currentStep + 1);
@@ -174,19 +256,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        const plusOneRadios = document.querySelectorAll('input[name="plus_one"]');
-        const conditionalInput = document.querySelector('.conditional-input');
-
-        if (plusOneRadios && conditionalInput) {
-            plusOneRadios.forEach(radio => {
-                radio.addEventListener('change', () => {
-                    if (radio.value === 'yes') {
-                        conditionalInput.classList.remove('hidden');
-                    } else {
-                        conditionalInput.classList.add('hidden');
-                    }
-                });
-            });
-        }
     }
 });
