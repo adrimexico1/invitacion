@@ -143,6 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainInvitation.classList.remove('invitation-hidden');
                 mainInvitation.classList.add('invitation-visible');
                 window.scrollTo(0, 0);
+
+                // Start music automatically when opening
+                const bgMusic = document.getElementById('bg-music');
+                if (bgMusic && !isPlaying) {
+                    bgMusic.play().then(() => {
+                        isPlaying = true;
+                        if (musicBtn) {
+                            musicBtn.innerHTML = '<span>&#10074;&#10074;</span>';
+                            musicBtn.classList.remove('pulse');
+                        }
+                    }).catch(error => {
+                        console.log("Autoplay blocked by browser. User must click the music button.");
+                    });
+                }
             }, 800);
         });
     }
@@ -188,11 +202,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (musicBtn) {
         musicBtn.addEventListener('click', () => {
+            const bgMusic = document.getElementById('bg-music');
+            if (!bgMusic) return;
+
             isPlaying = !isPlaying;
             if (isPlaying) {
+                bgMusic.play();
                 musicBtn.innerHTML = '<span>&#10074;&#10074;</span>';
                 musicBtn.classList.remove('pulse');
             } else {
+                bgMusic.pause();
                 musicBtn.innerHTML = '<span class="icon-music">&#9835;</span>';
                 musicBtn.classList.add('pulse');
             }
