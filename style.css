@@ -1,5 +1,5 @@
 :root {
-    color-scheme: light;
+    color-scheme: light !important;
     --primary-color: #C5A059;
     /* Gold/Bronze */
     --secondary-color: #000000;
@@ -18,10 +18,15 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    color-scheme: light !important;
+}
+
 body {
     font-family: var(--font-sans);
-    background-color: var(--bg-light);
-    color: var(--text-dark);
     overflow-x: hidden;
 }
 
@@ -116,7 +121,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
     position: relative;
     padding: 2rem;
     z-index: 100;
