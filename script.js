@@ -32,14 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     generateGuestInputs(guestData.invitados);
+                    generateNinosInputs(guestData.ninos);
                 }
             } catch (error) {
                 console.error('Error cargando invitados:', error);
                 generateGuestInputs(1);
+                generateNinosInputs(0);
             }
         } else {
             // Fallback para visitas manuales sin ID
             generateGuestInputs(1);
+            generateNinosInputs(0);
         }
     }
 
@@ -77,6 +80,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input type="text" name="guest_name_${i}" class="guest-name-input" 
                        placeholder="Escribir nombre o dejar vacío si no asiste" 
                        value="${i === 1 && guestData ? guestData.name : ''}">
+            `;
+            container.appendChild(div);
+        }
+    }
+
+    function generateNinosInputs(count) {
+        const container = document.getElementById('dynamic-ninos-container');
+        if (!container) return;
+
+        const infoPara = container.querySelector('p');
+        container.innerHTML = '';
+        if (infoPara) container.appendChild(infoPara);
+
+        if (!count || count <= 0) {
+            container.innerHTML = '<p style="color: #888;">No tienes pases de niños asignados.</p>';
+            return;
+        }
+
+        const notice = document.createElement('p');
+        notice.style.fontSize = '0.75rem';
+        notice.style.color = 'var(--primary-color)';
+        notice.style.marginBottom = '2rem';
+        notice.style.fontStyle = 'italic';
+        notice.innerText = '* Si alguno de tus pases de niño no será utilizado, favor de dejar el espacio en blanco.';
+        container.appendChild(notice);
+
+        for (let i = 1; i <= count; i++) {
+            const div = document.createElement('div');
+            div.className = 'nino-entry';
+            div.style.marginBottom = '1.5rem';
+            div.innerHTML = `
+                <label class="input-label">Nombre del niño ${i}</label>
+                <input type="text" name="nino_name_${i}" class="nino-name-input" 
+                       placeholder="Escribir nombre o dejar vacío">
             `;
             container.appendChild(div);
         }
@@ -184,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextStep) {
             nextStep.classList.add('active');
             currentStep = stepNumber;
-            const progress = (stepNumber / 5) * 100;
+            const progress = (stepNumber / 6) * 100;
             progressBar.style.width = `${progress}%`;
         }
     }
@@ -199,16 +236,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (input.value.trim()) allNames.push(input.value.trim());
         });
 
+        // Collect children names
+        const ninosNameInputs = document.querySelectorAll('.nino-name-input');
+        let childrenNames = [];
+        ninosNameInputs.forEach(input => {
+            if (input.value.trim()) childrenNames.push(input.value.trim());
+        });
+
         const data = {
             full_name: formData.get('full_name'),
             attendance: formData.get('attendance'),
             plus_one_names: allNames.join(', '),
+            ninos_names: childrenNames.join(', '),
             phone: formData.get('phone'),
             guest_id: guestId || "manual"
         };
 
         // Show loading state if desired
-        const lastBtn = document.querySelector('.rsvp-step[data-step="4"] .btn-next');
+        const lastBtn = document.querySelector('.rsvp-step[data-step="5"] .btn-next');
         const originalText = lastBtn.innerText;
         lastBtn.innerText = "Enviando...";
         lastBtn.disabled = true;
@@ -222,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(data)
             });
             // Proceed to success step even with no-cors as we assume success
-            updateStep(5);
+            updateStep(6);
         } catch (error) {
             console.error('Error:', error);
             alert('Hubo un problema al enviar tu confirmación. Por favor inténtalo de nuevo.');
@@ -255,7 +300,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (currentStep === 2 && attendance === 'no') {
                         // Si no asiste, saltamos directo al envío
                         submitRSVP();
+                    } else if (currentStep === 3) {
+                        // Si no hay niños, saltamos el paso 4
+                        if (!guestData || !guestData.ninos || guestData.ninos <= 0) {
+                            updateStep(5); // Saltamos al teléfono
+                        } else {
+                            updateStep(4);
+                        }
                     } else if (currentStep === 4) {
+                        updateStep(5); // Del paso niños al teléfono
+                    } else if (currentStep === 5) {
                         // Validación de teléfono antes de enviar (Paso final)
                         const phone = formData.get('phone');
                         if (phone && phone.length === 10) {
@@ -272,7 +326,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (e.target.classList.contains('btn-back')) {
-                updateStep(currentStep - 1);
+                if (currentStep === 5 && (!guestData || !guestData.ninos || guestData.ninos <= 0)) {
+                    updateStep(3); // Si volvimos del teléfono y no había niños, vamos al paso 3
+                } else {
+                    updateStep(currentStep - 1);
+                }
             }
         });
 

@@ -2,21 +2,25 @@
     "1": {
         "name": "Tía Chismosa",
         "invitados": 3,
+        "ninos": 2,
         "phone": ""
     },
     "2": {
         "name": "Familia Sánchez",
         "invitados": 5,
+        "ninos": 1,
         "phone": ""
     },
     "3": {
         "name": "Juan Pérez",
         "invitados": 1,
+        "ninos": 0,
         "phone": ""
     },
     "4": {
         "name": "Amigo VIP",
         "invitados": 2,
+        "ninos": 0,
         "phone": ""
     }
 }
