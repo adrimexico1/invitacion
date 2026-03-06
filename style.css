@@ -676,10 +676,9 @@ body {
 }
 
 .timeline-point svg {
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
     fill: #8d7d6a;
-    /* Tono cálido para los corazones */
 }
 
 .timeline-content {
@@ -744,48 +743,50 @@ body {
     }
 
     .timeline::after {
-        left: 60px;
-        /* Espacio para el emoji antes de la línea */
+        left: 85px;
+        /* Espacio para icono(55) + Aire(30) */
         transform: none;
     }
 
     .timeline-item {
         flex-direction: row !important;
         justify-content: flex-start;
-        padding-left: 0;
+        padding: 0;
         margin-bottom: 5px;
+        align-items: center;
     }
 
     .timeline-point {
-        left: 60px;
-        width: 32px;
-        height: 32px;
+        left: 85px;
+        width: 40px;
+        height: 40px;
     }
 
     .timeline-point svg {
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
     }
 
     .timeline-content {
         flex: 1;
-        padding-left: 45px;
-        /* Inicia después de la línea/corazón */
+        padding-left: 50px;
+        /* Después del corazón */
         padding-right: 10px;
         text-align: left !important;
     }
 
     .timeline-icon-box {
         display: flex;
-        width: 45px;
-        /* Más espacio para emojis visibles */
-        padding-left: 5px;
+        flex: 0 0 55px;
+        /* No encoger, tamaño fijo */
         justify-content: center;
     }
 
     .timeline-icon-box svg {
         width: 45px;
         height: 45px;
+        fill: #333;
+        /* Relleno sólido */
     }
 
     .timeline-time {
