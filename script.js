@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let guestData = null;
     const urlParams = new URLSearchParams(window.location.search);
     const guestId = urlParams.get('id');
+    let isPlaying = false;
+    const musicBtn = document.getElementById('music-toggle');
 
     async function loadGuestInfo() {
         if (guestId) {
@@ -197,9 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
 
     // Music Toggle
-    const musicBtn = document.getElementById('music-toggle');
-    let isPlaying = false;
-
     if (musicBtn) {
         musicBtn.addEventListener('click', () => {
             const bgMusic = document.getElementById('bg-music');
