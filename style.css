@@ -411,7 +411,7 @@ body {
 .message-section {
     background-color: #ffffff;
     color: var(--text-main);
-    padding: 8rem 2rem;
+    padding: 3rem 2rem;
     position: relative;
 }
 
@@ -426,7 +426,7 @@ body {
 }
 
 .countdown-section {
-    padding: 8rem 2rem;
+    padding: 3rem 2rem;
     background-color: #fdfbf7;
     /* Bone */
 }
@@ -462,7 +462,7 @@ body {
 
 .location-section {
     background-color: #ffffff;
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
 }
 
 .grid {
@@ -587,7 +587,6 @@ body {
 
 .itinerary-flower {
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     display: block;
     opacity: 0.9;
@@ -641,7 +640,7 @@ body {
 }
 
 .timeline-item {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: relative;
     width: 100%;
     display: flex;
@@ -780,7 +779,7 @@ body {
     background-color: #f2f2f2;
     /* Light Gray */
     color: var(--text-main);
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .dress-code-content {
@@ -831,7 +830,7 @@ body {
 
 /* --- DJ Section --- */
 .dj-section {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
     background-color: var(--bg-main);
     color: var(--text-main);
 }
@@ -848,7 +847,7 @@ body {
 }
 
 .gallery-section {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
     background-color: #fcfaf5;
     /* Bone */
 }
@@ -932,7 +931,7 @@ body {
 /* --- Padrinos --- */
 
 .padrinos-section {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
     background-color: #fdfbf7;
     /* Bone */
 }
@@ -1003,7 +1002,7 @@ body {
 /* --- Gifts --- */
 
 .gifts-section {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
     background: #f8f8f8;
     /* Very Light Gray */
 }
@@ -1113,7 +1112,7 @@ body {
 
 /* --- RSVP Section --- */
 .rsvp-section {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
     background-color: var(--bg-main);
     position: relative;
     overflow: hidden;
