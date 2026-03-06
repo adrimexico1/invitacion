@@ -632,10 +632,9 @@ body {
     width: 1.5px;
     background-color: #888;
     top: 50px;
-    /* Ajuste para que empiece después del primer icono */
     bottom: 50px;
-    left: 40%;
-    /* Ajuste para diseño asimétrico */
+    left: 100px;
+    /* Movido a la izquierda */
     transform: translateX(-50%);
 }
 
@@ -663,10 +662,11 @@ body {
 
 .timeline-point {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     background-color: #ffffff;
-    left: 40%;
+    left: 100px;
+    /* Alineado con la nueva posición de la línea */
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -676,15 +676,17 @@ body {
 }
 
 .timeline-point svg {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    /* Corazón más grande */
+    height: 35px;
     fill: #8d7d6a;
     /* Tono cálido para los corazones */
 }
 
 .timeline-content {
-    width: 60%;
-    padding-left: 10%;
+    flex: 1;
+    padding-left: 50px;
+    /* Espacio desde la línea */
     text-align: left !important;
 }
 
@@ -707,11 +709,10 @@ body {
 }
 
 .timeline-icon-box {
-    width: 35%;
+    width: 80px;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
-    /* Más cerca de la línea */
+    justify-content: center;
+    padding-right: 0;
 }
 
 .timeline-icon-box svg {
@@ -741,40 +742,38 @@ body {
     }
 
     .timeline::after {
-        left: 30px;
+        left: 65px;
+        /* Ajustado para estar entre icono y texto */
         transform: none;
     }
 
     .timeline-item {
         flex-direction: row !important;
         justify-content: flex-start;
-        padding-left: 60px;
-        margin-bottom: 20px;
-        /* Reducido drásticamente en móvil */
+        padding-left: 0;
+        margin-bottom: 10px;
     }
 
     .timeline-point {
-        left: 30px;
+        left: 65px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeline-point svg {
         width: 25px;
         height: 25px;
     }
 
-    .timeline-point svg {
-        width: 18px;
-        height: 18px;
-    }
-
     .timeline-content {
-        width: 100% !important;
-        padding: 0 20px;
+        padding-left: 35px;
         text-align: left !important;
-        margin: 0 !important;
     }
 
     .timeline-icon-box {
         display: flex;
         width: 50px;
-        padding-right: 15px;
+        padding-right: 0;
         justify-content: center;
     }
 
