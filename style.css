@@ -409,8 +409,8 @@ body {
 /* --- Sections --- */
 
 .message-section {
-    background-color: var(--bg-dark);
-    color: var(--text-white);
+    background-color: #ffffff;
+    color: var(--text-main);
     padding: 8rem 2rem;
     position: relative;
 }
@@ -427,7 +427,8 @@ body {
 
 .countdown-section {
     padding: 8rem 2rem;
-    background-color: var(--bg-main);
+    background-color: #fdfbf7;
+    /* Bone */
 }
 
 .countdown-timer {
@@ -460,7 +461,7 @@ body {
 }
 
 .location-section {
-    background-color: var(--bg-section);
+    background-color: #ffffff;
     padding: 6rem 2rem;
 }
 
@@ -802,7 +803,8 @@ body {
 
 .gallery-section {
     padding: 8rem 2rem;
-    background-color: var(--bg-main);
+    background-color: #fcfaf5;
+    /* Bone */
 }
 
 .qr-code {
@@ -885,7 +887,8 @@ body {
 
 .padrinos-section {
     padding: 8rem 2rem;
-    background-color: var(--bg-main);
+    background-color: #fdfbf7;
+    /* Bone */
 }
 
 .padrinos-grid {
@@ -955,7 +958,8 @@ body {
 
 .gifts-section {
     padding: 8rem 2rem;
-    background: var(--bg-section);
+    background: #f8f8f8;
+    /* Very Light Gray */
 }
 
 .gift-buttons {
