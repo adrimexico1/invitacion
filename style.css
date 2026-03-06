@@ -277,8 +277,10 @@ body {
 .click-to-open {
     color: #fff;
     text-align: center;
-    opacity: 0.7;
-    margin-top: -20px;
+    opacity: 0.8;
+    margin-top: 100px;
+    /* Movido hacia abajo para estar debajo del sello VIP */
+    z-index: 5;
 }
 
 .click-to-open p {
