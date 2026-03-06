@@ -580,27 +580,37 @@ body {
 
 /* --- Itinerary Section --- */
 .itinerary-section {
-    background-color: #fcfaf5;
-    /* Regreso al tono hueso */
-    padding: 6rem 0;
+    background-color: #ffffff;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.itinerary-flower {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    opacity: 0.9;
+}
+
+.itinerary-flower.top {
+    margin-bottom: 2rem;
+}
+
+.itinerary-flower.bottom {
+    margin-top: 2rem;
 }
 
 
 
 .program-title {
     font-family: var(--font-serif);
-    font-size: 3rem;
-    color: var(--text-title);
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     text-align: center;
-}
-
-.golden-ornament {
-    width: 250px;
-    height: 40px;
-    margin: 0 auto;
 }
 
 .timeline-card {
@@ -620,25 +630,25 @@ body {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 2px;
-    background-color: #d8c193;
-    /* Dorado más suave para la línea */
-    top: 0;
-    bottom: 0;
-    left: 50%;
+    width: 1.5px;
+    background-color: #888;
+    top: 50px;
+    /* Ajuste para que empiece después del primer icono */
+    bottom: 50px;
+    left: 40%;
+    /* Ajuste para diseño asimétrico */
     transform: translateX(-50%);
 }
 
 .timeline-item {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
 
 .timeline-item.animate-in {
@@ -646,20 +656,17 @@ body {
     transform: translateY(0);
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(n) {
     flex-direction: row;
-}
-
-.timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
+    justify-content: flex-start;
 }
 
 .timeline-point {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: #fcfaf5;
-    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    left: 40%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -669,53 +676,49 @@ body {
 }
 
 .timeline-point svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--primary-color);
+    width: 15px;
+    height: 15px;
+    fill: #8d7d6a;
+    /* Tono cálido para los corazones */
 }
 
 .timeline-content {
-    width: 40%;
-    padding: 0 40px;
+    width: 60%;
+    padding-left: 10%;
+    text-align: left !important;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-    text-align: left;
-    margin-left: 20%;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    text-align: right;
-    margin-right: 20%;
+.timeline-item:nth-child(n) .timeline-content {
+    margin: 0;
 }
 
 .timeline-time {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 2px;
 }
 
 .timeline-event {
-    font-family: var(--font-serif);
-    font-size: 1.6rem;
-    color: var(--text-title);
-    margin-top: 5px;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
 }
 
 .timeline-icon-box {
-    width: 40%;
+    width: 35%;
     display: flex;
-    justify-content: center;
-    padding: 0 40px;
+    justify-content: flex-end;
+    padding-right: 20px;
 }
 
 .timeline-icon-box svg {
-    width: 100px;
-    height: 100px;
-    stroke: var(--primary-color);
+    width: 45px;
+    height: 45px;
+    stroke: #333;
     fill: none;
-    stroke-width: 1;
+    stroke-width: 1.2;
 }
 
 @media (max-width: 768px) {
