@@ -272,12 +272,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const data = {
-            full_name: formData.get('full_name'),
-            attendance: formData.get('attendance'),
+            full_name: String(formData.get('full_name') || ""),
+            attendance: String(formData.get('attendance') || ""),
             plus_one_names: allNames.join(', '),
             ninos_names: childrenNames.join(', '),
-            phone: formData.get('phone'),
-            guest_id: guestId || "manual"
+            phone: String(formData.get('phone') || ""),
+            guest_id: String(guestId || "manual")
         };
 
         // Show loading state if desired
