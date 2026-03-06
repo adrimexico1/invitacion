@@ -718,9 +718,9 @@ body {
     width: 55px;
     /* Emoji más grande */
     height: 55px;
-    stroke: #333;
-    fill: none;
-    stroke-width: 1.2;
+    fill: #333;
+    /* Relleno sólido como en móvil */
+    stroke: none;
 }
 
 @media (max-width: 768px) {
