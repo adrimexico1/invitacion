@@ -744,8 +744,8 @@ body {
     }
 
     .timeline::after {
-        left: 45px;
-        /* Pegado más a la izquierda para ganar espacio */
+        left: 60px;
+        /* Espacio para el emoji antes de la línea */
         transform: none;
     }
 
@@ -757,7 +757,7 @@ body {
     }
 
     .timeline-point {
-        left: 45px;
+        left: 60px;
         width: 32px;
         height: 32px;
     }
@@ -769,24 +769,23 @@ body {
 
     .timeline-content {
         flex: 1;
-        /* Que use todo el ancho disponible */
         padding-left: 45px;
-        /* Espacio desde la línea */
+        /* Inicia después de la línea/corazón */
         padding-right: 10px;
         text-align: left !important;
     }
 
     .timeline-icon-box {
         display: flex;
-        width: 30px;
-        /* Más angosto en móvil */
+        width: 45px;
+        /* Más espacio para emojis visibles */
         padding-left: 5px;
         justify-content: center;
     }
 
     .timeline-icon-box svg {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
     }
 
     .timeline-time {
