@@ -633,8 +633,8 @@ body {
     background-color: #888;
     top: 50px;
     bottom: 50px;
-    left: 110px;
-    /* Suficiente espacio para que no se encime nada */
+    left: 50%;
+    /* Centrada en medio de la tarjeta */
     transform: translateX(-50%);
 }
 
@@ -665,8 +665,8 @@ body {
     width: 45px;
     height: 45px;
     background-color: #ffffff;
-    left: 110px;
-    /* Alineado con la nueva posición de la línea */
+    left: 50%;
+    /* Centrado con la línea */
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -683,9 +683,9 @@ body {
 }
 
 .timeline-content {
-    flex: 1;
-    padding-left: 90px;
-    /* Para que el texto empiece después del corazón */
+    width: 50%;
+    padding-left: 50px;
+    /* Separación del corazón */
     text-align: left !important;
 }
 
@@ -708,15 +708,17 @@ body {
 }
 
 .timeline-icon-box {
-    width: 60px;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    padding-right: 0;
+    justify-content: flex-end;
+    padding-right: 50px;
+    /* Más separado de la línea */
 }
 
 .timeline-icon-box svg {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    /* Emoji más grande */
+    height: 55px;
     stroke: #333;
     fill: none;
     stroke-width: 1.2;
@@ -741,8 +743,8 @@ body {
     }
 
     .timeline::after {
-        left: 55px;
-        /* Ajustado para móvil */
+        left: 65px;
+        /* Ajustado para icono y corazón */
         transform: none;
     }
 
@@ -754,9 +756,9 @@ body {
     }
 
     .timeline-point {
-        left: 75px;
-        width: 45px;
-        height: 45px;
+        left: 65px;
+        width: 38px;
+        height: 38px;
     }
 
     .timeline-point svg {
@@ -765,7 +767,8 @@ body {
     }
 
     .timeline-content {
-        padding-left: 75px;
+        padding-left: 60px;
+        /* Separación mínima corazón-texto */
         text-align: left !important;
     }
 
