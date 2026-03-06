@@ -663,8 +663,8 @@ body {
 
 .timeline-point {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     background-color: #ffffff;
     left: 40%;
     top: 50%;
@@ -676,8 +676,8 @@ body {
 }
 
 .timeline-point svg {
-    width: 14px;
-    height: 14px;
+    width: 25px;
+    height: 25px;
     fill: #8d7d6a;
     /* Tono cálido para los corazones */
 }
@@ -715,8 +715,8 @@ body {
 }
 
 .timeline-icon-box svg {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     stroke: #333;
     fill: none;
     stroke-width: 1.2;
@@ -749,11 +749,19 @@ body {
         flex-direction: row !important;
         justify-content: flex-start;
         padding-left: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
+        /* Reducido drásticamente en móvil */
     }
 
     .timeline-point {
         left: 30px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .timeline-point svg {
+        width: 18px;
+        height: 18px;
     }
 
     .timeline-content {
@@ -764,16 +772,23 @@ body {
     }
 
     .timeline-icon-box {
-        display: none;
-        /* Hide icons on mobile timeline to keep it clean, or we can make them smaller */
+        display: flex;
+        width: 50px;
+        padding-right: 15px;
+        justify-content: center;
+    }
+
+    .timeline-icon-box svg {
+        width: 40px;
+        height: 40px;
     }
 
     .timeline-time {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .timeline-event {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
 
