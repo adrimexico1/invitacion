@@ -739,12 +739,13 @@ body {
     }
 
     .timeline-card {
-        padding: 3rem 1rem;
+        padding: 3rem 0;
+        /* Menos espacio a los lados */
     }
 
     .timeline::after {
-        left: 65px;
-        /* Ajustado para icono y corazón */
+        left: 45px;
+        /* Pegado más a la izquierda para ganar espacio */
         transform: none;
     }
 
@@ -756,26 +757,30 @@ body {
     }
 
     .timeline-point {
-        left: 65px;
-        width: 38px;
-        height: 38px;
-    }
-
-    .timeline-point svg {
+        left: 45px;
         width: 32px;
         height: 32px;
     }
 
+    .timeline-point svg {
+        width: 26px;
+        height: 26px;
+    }
+
     .timeline-content {
-        padding-left: 60px;
-        /* Separación mínima corazón-texto */
+        flex: 1;
+        /* Que use todo el ancho disponible */
+        padding-left: 45px;
+        /* Espacio desde la línea */
+        padding-right: 10px;
         text-align: left !important;
     }
 
     .timeline-icon-box {
         display: flex;
-        width: 40px;
-        padding-right: 0;
+        width: 30px;
+        /* Más angosto en móvil */
+        padding-left: 5px;
         justify-content: center;
     }
 
