@@ -961,14 +961,21 @@ body {
         height: 30px;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .location-section .grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
     }
 
     .location-card {
+        width: 100%;
+        max-width: 330px;
         padding: 2rem 1.5rem;
-        margin: 0 0 2rem 0;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .itinerary-section .section-title {
