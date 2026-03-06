@@ -580,15 +580,55 @@ body {
 
 /* --- Itinerary Section --- */
 .itinerary-section {
-    background-color: #fcfaf5;
-    /* Bone */
-    padding: 6rem 0;
+    background-color: #000000;
+    /* Fondo negro para el header */
+    padding: 0;
+    overflow: visible;
+}
+
+.itinerary-header {
+    background-color: #000000;
+    padding: 6rem 0 8rem 0;
+    text-align: center;
+}
+
+.program-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    /* Más grande y llamativo */
+    color: #ffffff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.golden-ornament {
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.container-timeline {
+    margin-top: -6rem;
+    /* Hace que el cuadro blanco suba sobre el negro */
+    position: relative;
+    z-index: 10;
+    padding-bottom: 6rem;
+}
+
+.timeline-card {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 4rem auto;
+    margin: 0 auto;
     padding: 20px 0;
 }
 
@@ -596,7 +636,8 @@ body {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: var(--primary-color);
+    background-color: #d8c193;
+    /* Dorado más suave para la línea */
     top: 0;
     bottom: 0;
     left: 50%;
@@ -632,7 +673,7 @@ body {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: var(--bg-main);
+    background-color: #ffffff;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -693,6 +734,23 @@ body {
 }
 
 @media (max-width: 768px) {
+    .program-title {
+        font-size: 2.2rem;
+    }
+
+    .golden-ornament {
+        width: 180px;
+    }
+
+    .container-timeline {
+        margin-top: -4rem;
+        padding: 0 15px 4rem 15px;
+    }
+
+    .timeline-card {
+        padding: 3rem 1rem;
+    }
+
     .timeline::after {
         left: 30px;
         transform: none;
@@ -1061,10 +1119,7 @@ body {
         transform: none;
     }
 
-    .itinerary-section .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 3rem;
-    }
+
 
 }
 
