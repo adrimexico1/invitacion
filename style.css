@@ -71,6 +71,22 @@ body {
     color: var(--primary-color);
 }
 
+.location-header-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--primary-color);
+}
+
 .section-title.script {
     font-family: var(--font-script);
     font-size: 3.5rem;
