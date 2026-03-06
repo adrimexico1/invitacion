@@ -377,8 +377,8 @@ body {
     height: 100%;
     background-image: url('assets/nosotros.jpeg?v=1');
     background-size: cover;
-    background-position: center 15%;
-    /* Alineado más arriba para que no corte las cabezas en PC */
+    background-position: center 30%;
+    /* Bajado un poco para que no quede tan arriba */
     transform: scale(1.1);
     transition: transform 15s ease-out;
 }
