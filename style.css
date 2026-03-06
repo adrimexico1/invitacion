@@ -640,7 +640,8 @@ body {
 }
 
 .timeline-item {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    /* Más pegado */
     position: relative;
     width: 100%;
     display: flex;
@@ -662,8 +663,8 @@ body {
 
 .timeline-point {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #ffffff;
     left: 40%;
     top: 50%;
@@ -675,8 +676,8 @@ body {
 }
 
 .timeline-point svg {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     fill: #8d7d6a;
     /* Tono cálido para los corazones */
 }
@@ -709,7 +710,8 @@ body {
     width: 35%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
+    /* Más cerca de la línea */
 }
 
 .timeline-icon-box svg {
