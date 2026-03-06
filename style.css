@@ -640,8 +640,8 @@ body {
 }
 
 .timeline-item {
-    margin-bottom: 15px;
-    /* Más pegado */
+    margin-bottom: 0;
+    /* Pegado uno tras otro */
     position: relative;
     width: 100%;
     display: flex;
@@ -663,8 +663,8 @@ body {
 
 .timeline-point {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #ffffff;
     left: 40%;
     top: 50%;
@@ -676,8 +676,8 @@ body {
 }
 
 .timeline-point svg {
-    width: 22px;
-    height: 22px;
+    width: 14px;
+    height: 14px;
     fill: #8d7d6a;
     /* Tono cálido para los corazones */
 }
