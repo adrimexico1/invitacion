@@ -1086,25 +1086,25 @@ body {
     }
 
     .countdown-timer {
-        gap: 15px;
-        flex-wrap: wrap;
-        /* Permite que baje si es muy pequeño */
+        gap: 8px;
+        flex-wrap: nowrap;
         justify-content: center;
     }
 
     .timer-item {
-        min-width: 70px;
-        margin: 5px;
+        min-width: 15%;
+        margin: 0;
     }
 
     .timer-item span {
-        font-size: 2.2rem;
-        line-height: 1.1;
+        font-size: 1.8rem;
+        line-height: 1;
         display: block;
     }
 
     .timer-item label {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
+        letter-spacing: 1px;
     }
 
     /* Music button fix */
