@@ -905,6 +905,7 @@ body {
     }
 
     .hero-bg {
+        background-image: url('assets/nosotrosCel.jpeg?v=1');
         background-position: center;
     }
 
