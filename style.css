@@ -718,9 +718,9 @@ body {
     width: 55px;
     /* Emoji más grande */
     height: 55px;
-    fill: #333;
-    /* Relleno sólido como en móvil */
-    stroke: none;
+    stroke: #333;
+    fill: none;
+    stroke-width: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -785,8 +785,9 @@ body {
     .timeline-icon-box svg {
         width: 45px;
         height: 45px;
-        fill: #333;
-        /* Relleno sólido */
+        stroke: #333;
+        fill: none;
+        stroke-width: 1.2;
     }
 
     .timeline-time {
