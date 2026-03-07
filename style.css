@@ -752,6 +752,10 @@ body {
     object-fit: contain;
 }
 
+.icon-tenue {
+    opacity: 0.65;
+}
+
 @media (max-width: 768px) {
     .program-title {
         font-size: 2.2rem;
