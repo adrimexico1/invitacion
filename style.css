@@ -833,7 +833,8 @@ body {
     }
 
     .timeline-time {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
     }
 
     .timeline-event {
