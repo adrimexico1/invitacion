@@ -957,11 +957,13 @@ body {
 }
 
 .dress-long {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23C5A059" stroke-width="1"><path d="M6 3l6 4 6-4v18H6z"/></svg>');
+    background-image: url('icons/vestido.webp');
+    filter: invert(8%) sepia(94%) saturate(4531%) hue-rotate(227deg) brightness(88%) contrast(115%);
 }
 
 .suit {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23C5A059" stroke-width="1"><path d="M12 7v14M9 10h6M7 3h10v20H7z"/></svg>');
+    background-image: url('icons/traje.webp');
+    filter: invert(8%) sepia(94%) saturate(4531%) hue-rotate(227deg) brightness(88%) contrast(115%);
 }
 
 .colors-no {
