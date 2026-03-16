@@ -1548,3 +1548,59 @@ input:checked+.custom-checkbox::after {
         height: 150px;
     }
 }
+
+/* --- Final Hero Section --- */
+.final-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.final-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/final.webp?v=1');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+    transition: transform 15s ease-out;
+}
+
+.final-section.animate-in .final-bg {
+    transform: scale(1);
+}
+
+.final-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.thank-you-text {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .thank-you-text {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
