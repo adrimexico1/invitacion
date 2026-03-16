@@ -78,7 +78,7 @@ body {
     gap: 15px;
     font-family: var(--font-serif);
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 
 .header-icon {
@@ -534,7 +534,7 @@ body {
     min-height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     background-size: cover;
     background-position: center;
 }
@@ -553,6 +553,7 @@ body {
     position: relative;
     z-index: 2;
     color: #ffffff;
+    text-align: center;
 }
 
 .capilla-card {
@@ -597,7 +598,7 @@ body {
 }
 
 .location-time {
-    color: var(--primary-color);
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 1rem;
 }
