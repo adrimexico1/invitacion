@@ -1328,11 +1328,11 @@ body {
 }
 
 .palo-divider {
-    width: 95% !important;
-    max-width: 600px !important;
-    height: 50px !important;
+    width: 90% !important;
+    max-width: 700px !important;
+    height: 35px !important;
     background-image: url('assets/palo1.webp') !important;
-    background-size: contain !important;
+    background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     margin: 0 auto !important;
