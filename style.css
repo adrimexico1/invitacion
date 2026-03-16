@@ -1348,13 +1348,15 @@ body {
     margin-bottom: 2rem !important;
 }
 
-.rsvp-container .section-title {
+.rsvp-container .section-title,
+.padrinos-section .section-title {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     line-height: 1.2 !important;
 }
+
 
 .rsvp-section::before,
 .rsvp-section::after {
