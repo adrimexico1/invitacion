@@ -382,10 +382,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/nosotros.jpeg?v=1');
+    background-image: url('assets/nosotros.jpeg?v=2');
     background-size: cover;
-    background-position: center 30%;
-    /* Bajado un poco para que no quede tan arriba */
+    background-position: center center;
     transform: scale(1.1);
     transition: transform 15s ease-out;
 }
