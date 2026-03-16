@@ -968,15 +968,27 @@ body {
 }
 
 .dress-long {
-    background-image: url('icons/vestido.webp');
-    -webkit-filter: invert(10%) sepia(88%) saturate(3025%) hue-rotate(213deg) brightness(85%) contrast(116%);
-    filter: invert(10%) sepia(88%) saturate(3025%) hue-rotate(213deg) brightness(85%) contrast(116%);
+    background-color: #001B58;
+    -webkit-mask-image: url('icons/vestido.webp');
+    mask-image: url('icons/vestido.webp');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
 }
 
 .suit {
-    background-image: url('icons/traje.webp');
-    -webkit-filter: invert(10%) sepia(88%) saturate(3025%) hue-rotate(213deg) brightness(85%) contrast(116%);
-    filter: invert(10%) sepia(88%) saturate(3025%) hue-rotate(213deg) brightness(85%) contrast(116%);
+    background-color: #001B58;
+    -webkit-mask-image: url('icons/traje.webp');
+    mask-image: url('icons/traje.webp');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
 }
 
 .colors-no {
