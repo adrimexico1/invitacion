@@ -896,18 +896,40 @@ body {
 
 .dress-code-content {
     background: white;
-    padding: 4rem;
+    padding: 4rem 2rem;
     border: 1px solid var(--border-color);
     max-width: 600px;
     margin: 0 auto;
-    border-radius: 4px;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dress-code-content .floral-corner {
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .dress-code-content {
+        padding: 3rem 1rem;
+    }
+
+    .dress-code-content .floral-corner {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .dress-main {
-    font-size: 3rem;
-    letter-spacing: 5px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
     margin-bottom: 2rem;
+    font-family: var(--font-serif);
+    text-transform: uppercase;
 }
 
 .dress-icons {
