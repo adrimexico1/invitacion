@@ -514,11 +514,42 @@ body {
 }
 
 .location-card {
-    padding: 4rem 2rem;
+    position: relative;
+    padding: 3rem 2rem;
     background: var(--bg-card);
-    border-radius: 4px;
+    border-radius: 12px;
     transition: all 0.4s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+}
+
+.location-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+.location-card-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.capilla-card {
+    background-image: url('assets/capilla.webp?v=4');
+}
+
+.salon-card {
+    background-image: url('assets/salon.webp?v=1');
 }
 
 .location-card:hover {
@@ -545,22 +576,13 @@ body {
     background-size: contain;
 }
 
-.location-photo {
-    width: 100%;
-    max-width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--primary-color);
-}
+/* Location Photo removed from HTML, handled by background-image */
 
 .location-card h3 {
     font-family: var(--font-serif);
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 1.5rem;
 }
 
 .location-time {
@@ -1514,6 +1536,10 @@ input:checked+.custom-checkbox::after {
     .rsvp-section::after {
         opacity: 0.1;
         width: 150px;
+    }
+
+    .location-card {
+        min-height: 400px;
     }
 
     .thank-you-content p {
