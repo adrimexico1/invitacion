@@ -662,12 +662,13 @@ body {
 .golden-corner.top-left {
     top: 0;
     left: 0;
+    transform: rotate(180deg);
 }
 
 .golden-corner.bottom-right {
     bottom: 0;
     right: 0;
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 @media (max-width: 768px) {
