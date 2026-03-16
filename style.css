@@ -1585,7 +1585,7 @@ input:checked+.custom-checkbox::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/final.webp?v=1');
+    background-image: url('assets/finalv2.webp?v=1');
     background-size: cover;
     background-position: center;
     transform: scale(1.1);
