@@ -1328,8 +1328,9 @@ body {
 }
 
 .palo-divider {
-    width: 250px;
-    height: 60px;
+    width: 80%;
+    max-width: 500px;
+    height: 40px;
     background-image: url('assets/palo1.webp');
     background-size: contain;
     background-repeat: no-repeat;
@@ -1339,12 +1340,17 @@ body {
 
 .palo-divider.top {
     transform: rotate(180deg);
-    margin-bottom: 0.5rem;
+    margin-bottom: -5px;
 }
 
 .palo-divider.bottom {
-    margin-top: 0.5rem;
+    margin-top: -5px;
     margin-bottom: 2rem;
+}
+
+.rsvp-container .section-title {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .rsvp-section::before,
