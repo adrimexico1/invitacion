@@ -175,7 +175,7 @@ body {
     position: absolute;
     width: 250px;
     height: 250px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M5,5 C20,5 30,15 35,30 C40,45 55,55 70,60 C85,65 95,80 95,95" stroke="black" fill="none" stroke-width="0.3" opacity="0.4"/></svg>');
+    background-image: url('assets/esquinas.png?v=1');
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
@@ -185,24 +185,24 @@ body {
 .top-left {
     top: 0;
     left: 0;
+    transform: rotate(-90deg);
 }
 
 .top-right {
     top: 0;
     right: 0;
-    transform: rotate(90deg);
 }
 
 .bottom-left {
     bottom: 0;
     left: 0;
-    transform: rotate(-90deg);
+    transform: rotate(180deg);
 }
 
 .bottom-right {
     bottom: 0;
     right: 0;
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 .cover-content {
@@ -1260,7 +1260,6 @@ body {
     position: absolute;
     width: 300px;
     height: 600px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200"><path d="M10,10 Q30,50 10,90 Q-10,130 10,170" stroke="black" fill="none" stroke-width="0.2" opacity="0.3"/></svg>');
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
@@ -1512,5 +1511,10 @@ input:checked+.custom-checkbox::after {
 
     .thank-you-content p {
         font-size: 1.2rem;
+    }
+
+    .floral-corner {
+        width: 150px;
+        height: 150px;
     }
 }
