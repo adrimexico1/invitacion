@@ -643,23 +643,42 @@ body {
 /* --- Itinerary Section --- */
 .itinerary-section {
     background-color: #ffffff;
-    padding: 2rem 0;
+    padding: 6rem 0;
     position: relative;
+    overflow: hidden;
 }
 
-.itinerary-flower {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    opacity: 0.9;
+.golden-corner {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-image: url('assets/esquinaDorada.webp?v=1');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.itinerary-flower.top {
-    margin-bottom: 2rem;
+.golden-corner.top-left {
+    top: 0;
+    left: 0;
 }
 
-.itinerary-flower.bottom {
-    margin-top: 2rem;
+.golden-corner.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .itinerary-section {
+        padding: 4rem 0;
+    }
+
+    .golden-corner {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 
