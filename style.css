@@ -382,7 +382,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/nosotros.jpeg?v=5');
+    background-image: url('assets/nosotros.webp?v=6');
     background-size: cover;
     background-position: center center;
     transform: scale(1.1);
@@ -1129,7 +1129,7 @@ body {
     }
 
     .hero-bg {
-        background-image: url('assets/nosotrosCel.jpeg?v=1');
+        background-image: url('assets/nosotros.webp?v=6');
         background-position: center;
     }
 
