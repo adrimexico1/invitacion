@@ -968,7 +968,7 @@ body {
 }
 
 .dress-long {
-    background-color: #001B58;
+    background-color: var(--primary-color);
     -webkit-mask-image: url('icons/vestido.webp');
     mask-image: url('icons/vestido.webp');
     -webkit-mask-size: contain;
@@ -980,7 +980,7 @@ body {
 }
 
 .suit {
-    background-color: #001B58;
+    background-color: var(--primary-color);
     -webkit-mask-image: url('icons/traje.webp');
     mask-image: url('icons/traje.webp');
     -webkit-mask-size: contain;
