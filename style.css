@@ -295,9 +295,13 @@ body {
 }
 
 .seal {
-    width: 70px;
-    height: 70px;
-    background: radial-gradient(circle, #E8B951 0%, #CA961D 100%);
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    background-image: url('assets/boton.png?v=1');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -307,8 +311,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    border: 3px solid #b38317;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .seal-inner {
@@ -321,7 +325,7 @@ body {
 .reserved {
     font-family: var(--font-serif);
     font-size: 1.2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .ticket-count {
