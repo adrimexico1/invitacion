@@ -1063,11 +1063,13 @@ body {
 .qr-code {
     width: 250px;
     height: 250px;
+    display: block;
     margin: 4rem auto 0;
     padding: 15px;
     border: 1px solid var(--border-color);
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    object-fit: contain;
 }
 
 .music-player {
