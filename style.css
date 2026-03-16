@@ -888,48 +888,37 @@ body {
 }
 
 .dress-code-section {
-    background-color: #f2f2f2;
-    /* Light Gray */
+    background-color: #ffffff;
     color: var(--text-main);
-    padding: 4rem 2rem;
-}
-
-.dress-code-content {
-    background: white;
-    padding: 4rem 2rem;
-    border: 1px solid var(--border-color);
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-.dress-code-content .floral-corner {
-    width: 120px;
-    height: 120px;
-    opacity: 0.8;
+.dress-code-section .floral-corner {
+    width: 250px;
+    height: 250px;
 }
 
 @media (max-width: 768px) {
-    .dress-code-content {
-        padding: 3rem 1rem;
+    .dress-code-section {
+        padding: 4rem 1rem;
     }
 
-    .dress-code-content .floral-corner {
-        width: 80px;
-        height: 80px;
+    .dress-code-section .floral-corner {
+        width: 150px;
+        height: 150px;
     }
 }
 
 .dress-main {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
     margin-bottom: 2rem;
     font-family: var(--font-serif);
     text-transform: uppercase;
+    color: var(--secondary-color);
 }
 
 .dress-icons {
@@ -957,21 +946,7 @@ body {
 
 .colors-no {
     color: var(--primary-color);
-    font-weight: 700;
-    font-size: 1.2rem;
     margin-top: 5px;
-}
-
-/* --- DJ Section --- */
-.dj-section {
-    padding: 3rem 2rem;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-}
-
-.dj-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
 }
 
 .btn.outline {
