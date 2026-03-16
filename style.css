@@ -146,8 +146,8 @@ body {
 }
 
 .btn-blue {
-    background-color: #001B58;
-    color: var(--text-white);
+    background-color: #001B58 !important;
+    color: var(--text-white) !important;
 }
 
 .btn-blue:hover {
@@ -969,12 +969,12 @@ body {
 
 .dress-long {
     background-image: url('icons/vestido.webp');
-    filter: invert(8%) sepia(94%) saturate(4531%) hue-rotate(227deg) brightness(88%) contrast(115%);
+    filter: brightness(0) saturate(100%) invert(8%) sepia(86%) saturate(5437%) hue-rotate(224deg) brightness(91%) contrast(114%);
 }
 
 .suit {
     background-image: url('icons/traje.webp');
-    filter: invert(8%) sepia(94%) saturate(4531%) hue-rotate(227deg) brightness(88%) contrast(115%);
+    filter: brightness(0) saturate(100%) invert(8%) sepia(86%) saturate(5437%) hue-rotate(224deg) brightness(91%) contrast(114%);
 }
 
 .colors-no {
