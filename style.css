@@ -434,6 +434,7 @@ body {
     color: var(--text-main);
     padding: 3rem 2rem;
     position: relative;
+    overflow: hidden;
 }
 
 .message-text {
