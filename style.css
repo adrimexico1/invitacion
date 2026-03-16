@@ -145,6 +145,17 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.btn-blue {
+    background-color: #001B58;
+    color: var(--text-white);
+}
+
+.btn-blue:hover {
+    background-color: #001138;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .btn-whatsapp {
     background-color: #25D366;
     color: var(--text-white);
