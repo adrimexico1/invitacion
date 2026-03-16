@@ -1321,10 +1321,30 @@ body {
 
 /* --- RSVP Section --- */
 .rsvp-section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     background-color: var(--bg-main);
     position: relative;
     overflow: hidden;
+}
+
+.palo-divider {
+    width: 250px;
+    height: 60px;
+    background-image: url('assets/palo1.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.palo-divider.top {
+    transform: rotate(180deg);
+    margin-bottom: 0.5rem;
+}
+
+.palo-divider.bottom {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .rsvp-section::before,
