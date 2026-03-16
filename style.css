@@ -1700,8 +1700,9 @@ input:checked+.custom-checkbox::after {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     transform: scale(1.1);
+    transform-origin: top;
     transition: transform 15s ease-out;
 }
 
