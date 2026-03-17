@@ -1725,3 +1725,15 @@ input:checked+.custom-checkbox::after {
         height: 50vh;
     }
 }
+
+.rsvp-deadline-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.5;
+    font-style: italic;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
