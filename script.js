@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let isPlaying = false;
     const musicBtn = document.getElementById('music-toggle');
 
+    // Drive Link Logic
+    const driveLink = document.getElementById('drive-link');
+    if (driveLink && CONFIG.DRIVE_URL) {
+        driveLink.href = CONFIG.DRIVE_URL;
+    }
+
     async function loadGuestInfo() {
         if (guestId) {
             try {
