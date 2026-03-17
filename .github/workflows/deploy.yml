@@ -23,7 +23,8 @@ jobs:
       - name: Create config.js
         run: |
           echo "const CONFIG = {" > config.js
-          echo "    SCRIPT_URL: '${{ secrets.GOOGLE_SCRIPT_URL }}'" >> config.js
+          echo "    SCRIPT_URL: '${{ secrets.GOOGLE_SCRIPT_URL }}'," >> config.js
+          echo "    DRIVE_URL: '${{ secrets.DRIVE_URL }}'" >> config.js
           echo "};" >> config.js
 
       - name: Setup Pages
