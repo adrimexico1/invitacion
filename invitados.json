@@ -18,5 +18,10 @@
         "name": "Amigo VIP",
         "invitados": 2,
         "ninos": 0
+    },
+    "5": {
+        "name": "Highlander",
+        "invitados": 5,
+        "ninos": 0
     }
 }
