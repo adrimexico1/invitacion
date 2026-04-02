@@ -1737,3 +1737,36 @@ input:checked+.custom-checkbox::after {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* --- Calendar Section --- */
+.calendar-section {
+    background-color: var(--bg-main);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.container-calendar {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.calendar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    min-width: 220px;
+}
+
+.calendar-btn span {
+    font-size: 1.2rem;
+}
