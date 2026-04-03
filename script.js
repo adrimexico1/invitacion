@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Calendar Generation Logic (ICS format for native apps)
     function downloadICS() {
-        const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nURL:${window.location.href}\nDTSTART:20261128T230000Z\nDTEND:20261129T060000Z\nSUMMARY:Boda Guadalupe y Adrián\nDESCRIPTION:¡Nos casamos! Acompáñanos a celebrar nuestra boda.\nLOCATION:Capilla San Juan Pablo II, Av. Cri-Crí 1430, El Espinal, 94330 Orizaba, Ver.\nEND:VEVENT\nEND:VCALENDAR`;
+        const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nURL:${window.location.href}\nDTSTART:20261128T230000Z\nDTEND:20261129T090000Z\nSUMMARY:Boda Guadalupe y Adrián\nDESCRIPTION:¡Nos casamos! Acompáñanos a celebrar nuestra boda.\nLOCATION:Capilla San Juan Pablo II, Av. Cri-Crí 1430, El Espinal, 94330 Orizaba, Ver.\nEND:VEVENT\nEND:VCALENDAR`;
         
         const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
         const link = document.createElement('a');
