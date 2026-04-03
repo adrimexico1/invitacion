@@ -92,11 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const div = document.createElement('div');
             div.className = 'guest-entry';
             div.style.marginBottom = '1.5rem';
+            
+            let prefilledName = '';
+            if (guestData && guestData.nombres_invitados && guestData.nombres_invitados[i - 1]) {
+                prefilledName = guestData.nombres_invitados[i - 1];
+            } else if (i === 1 && guestData) {
+                prefilledName = guestData.name;
+            }
+
             div.innerHTML = `
                 <label class="input-label">Nombre del invitado ${i}</label>
                 <input type="text" name="guest_name_${i}" class="guest-name-input" 
                        placeholder="Escribir nombre o dejar vacío si no asiste" 
-                       value="${i === 1 && guestData ? guestData.name : ''}">
+                       value="${prefilledName}">
             `;
             container.appendChild(div);
         }
@@ -127,10 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const div = document.createElement('div');
             div.className = 'nino-entry';
             div.style.marginBottom = '1.5rem';
+
+            let prefilledNinoName = '';
+            if (guestData && guestData.nombres_ninos && guestData.nombres_ninos[i - 1]) {
+                prefilledNinoName = guestData.nombres_ninos[i - 1];
+            }
+
             div.innerHTML = `
                 <label class="input-label">Nombre del niño ${i}</label>
                 <input type="text" name="nino_name_${i}" class="nino-name-input" 
-                       placeholder="Escribir nombre o dejar vacío">
+                       placeholder="Escribir nombre o dejar vacío"
+                       value="${prefilledNinoName}">
             `;
             container.appendChild(div);
         }

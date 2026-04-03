@@ -2,26 +2,36 @@
     "1": {
         "name": "Tía Chismosa",
         "invitados": 3,
-        "ninos": 2
+        "ninos": 2,
+        "nombres_invitados": ["Tía Chismosa", "Tío Ramón"],
+        "nombres_ninos": ["Pedrito"]
     },
     "2": {
         "name": "Familia Sánchez",
         "invitados": 5,
-        "ninos": 1
+        "ninos": 1,
+        "nombres_invitados": ["Benito Sánchez", "Adriana Contreras", "Luis Sánchez"],
+        "nombres_ninos": []
     },
     "3": {
         "name": "Juan Pérez",
         "invitados": 1,
-        "ninos": 0
+        "ninos": 0,
+        "nombres_invitados": ["Juan Pérez"],
+        "nombres_ninos": []
     },
     "4": {
         "name": "Amigo VIP",
         "invitados": 2,
-        "ninos": 0
+        "ninos": 0,
+        "nombres_invitados": ["Amigo VIP", "Acompañante VIP"],
+        "nombres_ninos": []
     },
     "5": {
         "name": "highlander cabezon",
         "invitados": 5,
-        "ninos": 0
+        "ninos": 0,
+        "nombres_invitados": ["Hugo", "Paco", "Luis"],
+        "nombres_ninos": []
     }
 }
