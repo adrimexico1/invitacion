@@ -163,7 +163,9 @@
             "Miguel Angel Rosas Hernandez",
             "Laura Ines"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Mia Michel"
+        ]
     },
     "17": {
         "name": "Marcelino Fermin Rosas Hernandez",
@@ -194,7 +196,9 @@
             "Alberto",
             "Estefania"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Guadalupe"
+        ]
     },
     "20": {
         "name": "Fermin Rosas Garcia",
@@ -218,7 +222,9 @@
             "Alba Sarai",
             "Katya"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Jesus"
+        ]
     },
     "22": {
         "name": "Libia Yolanda Rosas Hernandez",
@@ -289,11 +295,11 @@
         "nombres_ninos": []
     },
     "29": {
-        "name": "Rosalia Pueros Rosas",
+        "name": "Rosalia Puertos Rosas",
         "invitados": 2,
         "ninos": 1,
         "nombres_invitados": [
-            "Rosalia Pueros Rosas"
+            "Rosalia Puertos Rosas"
         ],
         "nombres_ninos": []
     },
@@ -307,7 +313,9 @@
             "Valeria",
             "Grecia"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Giordana"
+        ]
     },
     "31": {
         "name": "Evelyn Reyes",
@@ -364,7 +372,10 @@
             "Ruth",
             "Angelo"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Ander Santiago",
+            "Irving"
+        ]
     },
     "36": {
         "name": "Dulce Maria Cancino",
