@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadGuestInfo() {
         if (guestId) {
             try {
-                const response = await fetch('invitados.json');
+                const response = await fetch('invitados.json?v=' + new Date().getTime());
                 const data = await response.json();
                 guestData = data[guestId];
 
