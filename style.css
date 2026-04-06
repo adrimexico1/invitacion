@@ -1507,7 +1507,9 @@ input[type="text"]:focus {
 }
 
 .radio-label:hover,
-.checkbox-label:hover {
+.checkbox-label:hover,
+.radio-label:has(input:checked),
+.checkbox-label:has(input:checked) {
     border-color: var(--primary-color);
 }
 
