@@ -30,12 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (greetingContainer) greetingContainer.style.display = 'block';
                     if (nameText) nameText.innerText = guestData.name;
-                    if (ticketText) ticketText.innerText = guestData.invitados;
+                    if (ticketText) {
+                        ticketText.innerText = guestData.invitados;
+                        const ticketLabel = document.getElementById('guest-tickets-label');
+                        if (ticketLabel) {
+                            ticketLabel.innerText = guestData.invitados === 1 ? 'Pase para adulto' : 'Pases para adulto';
+                        }
+                    }
                     if (rsvpNameInput) rsvpNameInput.value = guestData.name;
 
                     if (guestData.ninos > 0) {
                         if (ninosDisplay) ninosDisplay.style.display = 'block';
-                        if (ninosCountText) ninosCountText.innerText = guestData.ninos;
+                        if (ninosCountText) {
+                            ninosCountText.innerText = guestData.ninos;
+                            const ninosLabel = document.getElementById('guest-ninos-label');
+                            if (ninosLabel) {
+                                ninosLabel.innerText = guestData.ninos === 1 ? 'Pase para niño' : 'Pases para niños';
+                            }
+                        }
                     } else {
                         if (ninosDisplay) ninosDisplay.style.display = 'none';
                     }
