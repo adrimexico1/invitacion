@@ -86,10 +86,11 @@
         "invitados": 2,
         "ninos": 1,
         "nombres_invitados": [
-            "Ángel Palacios Sánchez",
-            "Aarón Palacios"
+            "Ángel Palacios Sánchez"
         ],
-        "nombres_ninos": []
+        "nombres_ninos": [
+            "Aarón Palacios"
+        ]
     },
     "10": {
         "name": "Aristeo Sánchez León",
@@ -121,7 +122,7 @@
             "Marcelina Sánchez Valenzuela",
             "Pedro Rivera",
             "Laura Rivera",
-            "Carla Peña",
+            "Carlos Peña",
             "Ernesto Peña",
             "Maria Peña"
         ],
@@ -736,6 +737,15 @@
         "ninos": 0,
         "nombres_invitados": [
             "Mara Ivóne Ramírez"
+        ],
+        "nombres_ninos": []
+    },
+    "75": {
+        "name": "Arnot Palacios Sánchez",
+        "invitados": 2,
+        "ninos": 2,
+        "nombres_invitados": [
+            "Arnot Palacios Sánchez"
         ],
         "nombres_ninos": []
     }
