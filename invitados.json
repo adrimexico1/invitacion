@@ -920,6 +920,24 @@
         ],
         "nombres_ninos": []
     },
+    "95": {
+        "name": "Marcelino López",
+        "invitados": 2,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Marcelino López"
+        ],
+        "nombres_ninos": []
+    },
+    "96": {
+        "name": "Reyna",
+        "invitados": 1,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Reyna"
+        ],
+        "nombres_ninos": []
+    },
     "117": {
         "name": "Highlander Emmanuel Fuentes Beltran",
         "invitados": 5,
