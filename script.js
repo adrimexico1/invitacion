@@ -29,7 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     const rsvpNameInput = document.getElementById('rsvp-name-input');
 
                     if (greetingContainer) greetingContainer.style.display = 'block';
-                    if (nameText) nameText.innerText = guestData.name;
+                    if (nameText) {
+                        if (guestData.name.includes('&')) {
+                            nameText.innerHTML = guestData.name.replace(/&/g, '<span class="normal-amp">&</span>');
+                        } else {
+                            nameText.innerText = guestData.name;
+                        }
+                    }
                     if (ticketText) {
                         ticketText.innerText = guestData.invitados;
                         const ticketLabel = document.getElementById('guest-tickets-label');

@@ -341,6 +341,11 @@ body {
     z-index: 10;
 }
 
+.normal-amp {
+    font-family: var(--font-sans);
+    font-weight: normal;
+}
+
 .ticket-count {
     display: block;
     font-size: 3.5rem;
