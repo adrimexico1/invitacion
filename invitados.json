@@ -966,6 +966,22 @@
         ],
         "nombres_ninos": []
     },
+    "100": {
+        "name": "Mari Hernández Cruz",
+        "invitados": 3,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Mari Hernández Cruz "
+        ],
+        "nombres_ninos": []
+    },
+    "101": {
+        "name": "Fam. Santiago Martinez",
+        "invitados": 3,
+        "ninos": 0,
+        "nombres_invitados": [],
+        "nombres_ninos": []
+    },
     "117": {
         "name": "Highlander Emmanuel Fuentes Beltran",
         "invitados": 5,
