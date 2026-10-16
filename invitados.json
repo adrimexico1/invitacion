@@ -982,6 +982,15 @@
         "nombres_invitados": [],
         "nombres_ninos": []
     },
+    "102": {
+        "name": "Juan Carlos Carrillo",
+        "invitados": 2,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Juan Carlos Carrillo"
+        ],
+        "nombres_ninos": []
+    },
     "117": {
         "name": "Highlander Emmanuel Fuentes Beltran",
         "invitados": 5,
