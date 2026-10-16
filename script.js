@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let prefilledName = '';
             if (guestData && guestData.nombres_invitados && guestData.nombres_invitados[i - 1]) {
                 prefilledName = guestData.nombres_invitados[i - 1];
-            } else if (i === 1 && guestData) {
+            } else if (i === 1 && guestData && String(guestId) !== '101') {
                 prefilledName = guestData.name;
             }
 
