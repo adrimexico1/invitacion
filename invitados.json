@@ -1018,6 +1018,33 @@
         ],
         "nombres_ninos": []
     },
+    "106": {
+        "name": "Carlos Perez",
+        "invitados": 1,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Carlos Perez"
+        ],
+        "nombres_ninos": []
+    },
+    "107": {
+        "name": "Arturo Osorio",
+        "invitados": 1,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Arturo Osorio"
+        ],
+        "nombres_ninos": []
+    },
+    "108": {
+        "name": "Francisco Morales",
+        "invitados": 2,
+        "ninos": 0,
+        "nombres_invitados": [
+            "Francisco Morales"
+        ],
+        "nombres_ninos": []
+    },
     "117": {
         "name": "Highlander Emmanuel Fuentes Beltran",
         "invitados": 5,
