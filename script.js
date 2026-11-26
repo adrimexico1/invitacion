@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Countdown Timer
-    const weddingDate = new Date('2026-11-28T16:00:00-06:00').getTime();
+    const weddingDate = new Date('2026-11-28T17:00:00-06:00').getTime();
 
     const updateCountdown = () => {
         const now = new Date().getTime();
